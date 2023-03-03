@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Sanchez&display=swap');
+
+:root {
+    --cream: #FDF6F0;
+    --pink: #F38BA0;
+    --dark: #194350;
+    --salmon: #FF8E7F;
+    --green: #9DBEB9;
+}
+    
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    margin-bottom: 100px;
+}
+
+p {
+    font-family: "Sanchez", sans-serif;
+}
+
+.header h1{
+    font-size: 100px;
+
+}
+
+h1 {
+    font-size: 80px;
+    color: var(--pink);
+}
+
+.subheader {
+    max-width: 400px;
+    font-size: 50px;
+}
+
+.hero {
+    background-color: var(--cream);
+    background-image: url(./images/desktop-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right -9px;
+    height: 844px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;;
+}
+
+.hero-text > *{
+    margin-top: 20px;
+}
+
+.cta {
+    display: flex;
+    gap: 20px; 
+}
+
+.btn {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid var(--pink);
+}
+
+.primary-btn{
+    background: var(--pink);
+    color: white
+}
+
+.secondary-btn{
+    background: transparent;
+    color: var(--pink);
+    
+}
+
+
+.avatar {
+    height: 400px;
+    width: 400px;
+}
+
+/* animation  */
+
+.hero .dynamic-text{
+    color: var(--pink);
+    height: 90px;
+    line-height: 80px;
+    overflow: hidden;
+    
+}
+
+.dynamic-text li{
+  list-style: none;
+  color: var(--pink);
+  font-size: 100px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-text li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-text li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--cream);
+  border-left: 2px solid var(--pink);
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.wrapper {
+    margin:  160px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px; 
+}
+
+.about p, .objectives p{
+    font-size: 25px;
+    max-width: 400px;
+}
+
+.role {
+    background: var(--cream);
+    padding: 100px;
+    
+}
+
+.role h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.role-card {
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    align-items: center;
+    
+}
+
+.card p, .fact p{
+    font-size: 20px;
+}
+.card {
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 60px 5px 60px 5px;
+    padding: 35px;
+    color: white;
+}
+
+.pink {
+    background: var(--pink);
+}
+
+.salmon {
+    background: var(--salmon);
+}
+
+.green {
+    background: var(--green);
+}
+
+.fun-facts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+}
+
+.fun-facts p{
+    width: 300px;
+    max-width: 300px;
+}
+
+.inspiration {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.inspo h1{
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.inspo-2{
+    background-image: url(./images/sablay.jpeg) ;
+}
+
+.inspo-4 {
+    background-image: url(./images/family.jpeg) ;
+
+}
+
+.inspo-6 {
+    background-image: url(./images/future.jpg) ;
+
+}
+.inspo {
+    display: flex;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.dark {
+    background: var(--dark);
+}
+
+.objectives {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px; 
+}
+
+
+
+
+/* .inspo-1 {
+    background-image: var(--dark);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+} */
+
+
+/* end of animation */
+
+
+/* /mobile first/ */
+
+/* .hero {
+    background-color: var(--cream);
+    background-image: url(./images/mobile-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right -9px;
+    height: 844px;
+    text-align: center;
+}
+
+.heto-text {
+    height: 50%;
+}
+
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+} */
+
